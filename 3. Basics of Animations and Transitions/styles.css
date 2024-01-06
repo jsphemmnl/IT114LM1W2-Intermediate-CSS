@@ -10,16 +10,20 @@
   font-size: 24px;
 }
 
-/* Todo 3.0: Create an animation that increases and decreases the scale of the box  */
+/* DONE 3.0: Create an animation that increases and decreases the scale of the box  */
 .todo-0-container .box {
   /* Apply animation here */
-  @keyframes scale {
-    0% {
-      transform: scaleX(1);
-    }
-    50% {
-      transform: scaleX(1.8);
-    }
+  animation: bob 600ms ease infinite;
+}
+@keyframes bob {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 150%;
+  }
+  100% {
+    scale: 100%;
   }
 }
 
