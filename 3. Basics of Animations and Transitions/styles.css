@@ -32,15 +32,45 @@ Start with using "from" and "to". Now use "0%" and "100%" as your key frames.
 Set more key frames between 0% and 100%. */
 .todo-1-container .box {
   /* Apply animation here */
+  animation: leftRight 1500ms infinite;
 }
-
+@keyframes leftRight {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 /* Todo 3.2: Try the different timing funcitons such as linear, ease-in, ease-in-out, cubic-bezier, and steps*/
 .todo-2-container .box {
   /* Apply animation here */
+  /* animation: timing 1000ms linear infinite; */
+  /* animation: timing 1000ms ease infinite; */
+  /* animation: timing 1000ms cubic-bezier(0.9, 0.5, 0.7, 0.9) infinite; */
+  animation: timing 750ms step-start infinite;
 }
-
+@keyframes timing {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 /* Todo 3.3: Create a transition that will raise the button up and will make it cast a shadow when you hover over the button */
 /* bonus: apply the transition on the box shadow with different duration and timing function. This should all be in one line*/
 .todo-3-container button {
   /* Apply transition here */
+  transition: 200ms linear;
+}
+.todo-3-container button:hover {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.24);
+  transform: translateY(-4px);
 }
